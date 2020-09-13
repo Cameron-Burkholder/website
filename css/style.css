@@ -4,8 +4,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Lora";
-  overflow-x: hidden;
   z-index: 0;
+}
+body {
+  overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: "Play";
@@ -84,11 +86,56 @@ li.nav-item {
 }
 a.nav-link {
   text-decoration: none;
+  font-family: "Play";
   color: white;
   opacity: 0.85;
 }
 a.nav-link:hover {
-  transform: translateY(4px);
+  opacity: 1.0;
+  border-bottom: 2px solid #405aa0;
+}
+li.nav-active {
+  border-bottom: 2px solid #BF8B00;
+}
+
+/* FOOTER */
+footer.footer {
+  height: 40VH;
+  width: 100VW;
+  padding: 32px 128px;
+  background: #0d1b40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.footer-head {
+
+}
+h4.footer-title {
+  text-align: center;
+  opacity: 0.9;
+  color: white;
+}
+div.footer-social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+a.footer-social img.footer-social {
+  width: 32px;
+}
+div.footer-tail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+a.footer-tail-link, p.footer-tail-item {
+  color: #AAA;
+  text-decoration: none;
+  margin: 0 16px;
+  font-family: "Play";
+  opacity: 0.5;
 }
 
 /* HOME PAGE */
@@ -453,4 +500,113 @@ a.contact-method {
 p.contact-description {
   opacity: 0.8;
   margin-top: 16px;
+}
+
+/* ABOUT PAGE */
+body#about header.header {
+  background-image: url("../media/About Header Background.jpg");
+}
+body#about div.header-overlay {
+  background: #0d1b40;
+}
+section#about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 32px;
+  align-items: center;
+  padding: 64px 256px;;
+  background: white;
+}
+div#text {
+  display: block;
+  height: 100%;
+  overflow-y: visible;
+}
+h2#about-title {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+p#about-body {
+  font-size: 16px;
+  opacity: 0.75;
+}
+img#about-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+}
+a#about-resume-button {
+  display: block;
+  max-width: 196px;
+  text-align: center;
+  color: white;
+  background: #0d1b40;
+  padding: 16px 32px;
+  margin-top: 48px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a#about-resume-button:hover {
+  cursor: pointer;
+  color: black;
+  background: white;
+  box-shadow: 1px 1px 3px rgba(40, 40, 40, 0.5);
+  transition: all 0.3s ease;
+}
+section#college {
+  height: 90VH;
+  width: 100VW;
+  background: url("../media/Liberty University.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+div#college-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+div#college-content {
+  z-index: 2;
+  width: 80VW;
+}
+h2#college-title {
+  color: white;
+  font-size: 48pt;
+  margin-bottom: 10VH;
+  text-shadow: 3px 3px 8px rgba(40, 40, 40, 0.7);
+}
+h3#college-major, h3#college-cognate, h3#college-gpa {
+  color: white;
+  text-align: right;
+  font-size: 32pt;
+  opacity: 0.8;
+  text-shadow: 2px 2px 5px rgba(40, 40, 40, 0.7);
+}
+span.highlight {
+  color: #BF8B00;
+  opacity: 1.0;
+}
+section#story {
+  padding: 64px 256px;;
+  background: white;
+}
+h2#story-title {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+p#story-body {
+  font-size: 16px;
+  opacity: 0.75;
 }
